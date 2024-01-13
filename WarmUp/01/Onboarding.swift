@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct Onboarding: View {
+    
+    @Binding var isPresented: Bool
+    
     var body: some View {
         VStack {
             
@@ -80,7 +83,7 @@ struct Onboarding: View {
             Spacer()
             
             Button { // 확인 버튼
-                
+                isPresented = false
             } label: {
                 Text("Continue")
                     .padding()
@@ -96,5 +99,5 @@ struct Onboarding: View {
 }
 
 #Preview {
-    Onboarding()
+    Onboarding(isPresented: .constant(true))
 }
