@@ -33,35 +33,34 @@ struct Setting: View {
         NavigationStack {
             List {
                 
-                Section {
+                NavigationLink {
+                    Section {
+                        Text("123")
+                    }
+                } label: {
                     HStack {
                         Image(systemName: "person")
                             .resizable()
                             .scaledToFit()
                             .frame(width: 30, height: 30)
-                            .padding()
+                            .padding(.all,15)
                             .background(.gray)
                             .foregroundColor(.white)
                             .cornerRadius(100)
                         
                         VStack(alignment: .leading) {
                             Text("박인호")
+                                .padding(.horizontal, 5)
                                 .minimumScaleFactor(0.5) // 텍스트 크기의 최소 축소 비율 지정
                                 .lineLimit(1) // 텍스트가 한 줄을 넘지 않도록 설정
-                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                                .font(.system(size: 25))
                             Text("Apple ID, iCloud+, 미디어 및 구입 항목")
+                                .padding(.horizontal, 5)
                                 .minimumScaleFactor(0.5) // 텍스트 크기의 최소 축소 비율 지정
                                 .lineLimit(2) // 텍스트가 한 줄을 넘지 않도록 설정
                                 .font(.subheadline)
                         }
                         
-                        Spacer()
-                        
-                        Image(systemName: "greaterthan")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 10, height: 20)
-                            .foregroundColor(.gray)
                     }
                 }
                 
